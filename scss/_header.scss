@@ -1,0 +1,98 @@
+.Ques{
+    width: 100%;
+    height: auto;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    .img{
+        width: 30%;
+        margin-top: 5rem;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .titulo{
+        width: 70%;
+        height: 100%;
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: white;
+        h1{
+            font-size: 3rem;
+            padding: .5rem;
+            color: rebeccapurple;
+            font-family: 'Oswald', sans-serif;
+        }
+        p{
+            font-size: 2rem;
+            width: 90%;
+            padding: .5rem;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+}
+//tablets
+@media screen and (max-width: 1024px){
+    .Ques{
+        flex-direction: column;
+        margin-bottom: 1rem;
+        height: auto;
+        align-items: center;
+
+        .img{
+            margin-top: 1rem;
+            padding: 1rem;
+            margin-bottom: .5rem;
+        }
+        .titulo{
+            margin-top: 0;
+            width: 100%;
+            height: auto;
+            background: $menu;
+            color: white;
+            justify-content: flex-start;
+            h1{
+                width: 100%;
+                text-align: center;
+                color: white;
+                background: rebeccapurple;
+                padding: .8rem;
+            }
+            p{
+                margin: 1.5rem;
+            }
+        }
+    }
+}
+//moviles
+@media screen and (max-width: 500px){
+    .Ques{
+        flex-direction: column;
+        margin-bottom: 2rem;
+        height: auto;
+        align-items: center;
+        
+        .img{
+            padding: .5rem;
+        }
+        .titulo{
+            justify-content: flex-start;
+            h1{
+                width: 100%;
+                padding: .8rem;
+                font-size: 2rem;
+            }
+            p{
+                margin: 1.5rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

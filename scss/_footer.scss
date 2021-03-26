@@ -1,0 +1,66 @@
+footer{
+    width: 100%;
+    padding: 1rem;
+    .identificativos{
+        p{
+            color: rebeccapurple;
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            text-align: center;
+        }
+        h1{
+            color: rebeccapurple;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .copy{
+            font-size: 1.5rem;
+            font-size: 'Oswald', sans-serif;
+        }
+    }
+}
+
+//tablets
+@media screen and (max-width: 1024px){
+    footer{
+        padding: .5rem;
+        background: rgba(157, 11, 255, 0.774);
+        .identificativos{
+            width: 100%;
+            p{
+                color: white;
+                font-family: 'Oswald', sans-serif;
+                font-size: 2rem;
+                text-align: center;
+            }
+            h1{
+                color: white;
+                font-family: 'Roboto', sans-serif;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+            .copy{
+                font-size: 1.5rem;
+                font-size: 'Oswald', sans-serif;
+            }
+        }
+    }
+}
+
+//movil
+@media screen and (max-width: 500px){
+    footer{
+        .identificativos{
+            p{
+                font-size: 1.2rem;
+            }
+            h1{
+                font-size: 1rem;
+            }
+            .copy{
+                font-size: 1.2rem;
+            }
+        }
+    }
+}

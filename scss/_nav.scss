@@ -1,0 +1,113 @@
+.escritorio{
+    width: 100%;
+    height: 5rem;
+    background: $menu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.788);
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    a{
+        font-family: 'Oswald', sans-serif;
+        font-size: 2rem;
+        text-decoration: none;
+        padding: 1rem;
+        color: $contraste;
+        transition: ease-in-out;
+        &:hover{
+            color: rgb(185, 185, 185);
+            background: rgb(72,2,122);
+        }
+    }
+}
+
+.degradado{
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0);
+    position: fixed;
+    top: 0;
+    display: none;
+    z-index: 800;
+    transition: ease-in-out .50s;
+}
+
+.movil{
+    width: 80%;
+    max-width: 600px;
+    height: 100vh;
+    background: $menu;
+    position: fixed;
+    top: 0;
+    left: -80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    z-index: 1000;
+    transition: ease-in-out .25s;
+    a{
+        font-size: 2.5rem;
+        font-family: 'Oswald', sans-serif;
+        text-decoration: none;
+        color: $contraste;
+        padding: 1.5rem;
+        transition: ease-in-out .15s;
+        &:hover{
+            background: rgb(74, 2, 122);
+            color:rgb(0, 0, 0)
+        }
+    }
+    .salir{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 1.5rem;
+        background: white;
+        font-family:'Oswald', sans-serif;
+        font-size: 2.5rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: ease-in-out .15s;
+        &:hover{
+            background: rgb(121, 4, 199);
+            color:white;
+        }
+    }
+}
+
+.btnMenu{
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: $menu;
+    box-shadow: 0, 0, 55px rgba(0, 0, 0, .35);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    z-index: 600;
+    i{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    .escritorio{
+        display: none;
+    }
+    .movil{
+        display: flex;
+    }
+    .btnMenu{
+        display: flex;
+    }
+}
