@@ -1,7 +1,10 @@
 .cuantoSon{
     width: 100%;
     height: auto;
-    background: rgba(157, 11, 255, 0.774);;
+    background: rgba(157, 11, 255, 0.774);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .titulo2{
         width: 100%;
         height: auto;
@@ -9,6 +12,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-bottom: 2rem;
         h1{
             width: 100%;
             text-align: center;
@@ -17,6 +21,8 @@
             background: rebeccapurple;
             color:white;
             margin-bottom: 1rem;
+            padding: 1rem;
+            font-weight: lighter;
         }
         p{
             width: 90%;
@@ -24,66 +30,63 @@
             font-family: 'Roboto', sans-serif;
             color: white;
         }
-        .arquetipos{
-            width: 100%;
+    }
+    .acordeon{
+        width: 90%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contenido{
+            width: 80%;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
-            padding: 2rem;
-            .cuadro{
-                width: 400px;
-                height: 600px;
-                margin: .7rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            margin-bottom: 1rem;
+            position: relative;
+            .nombre{
+                position: relative;
+                width: 100%;
+                background: white;
+                color: rebeccapurple;
+                font-family: 'Oswald', sans-serif;
+                font-size: 3rem;
                 padding: .5rem;
-                background: rgb(250, 250, 250);
-                border-radius: 25px;
-                box-shadow: 12px 16px 35px rgba(0, 0, 0, 0.582);
-                h1{
-                    font-family: 'Oswald', sans-serif;
-                    color: rebeccapurple;
-                    background: none;
-                    margin-bottom: .3rem;
+                border-radius: 25px 25px 0 0 ;
+                font-weight: bold;
+                text-align: center;
+                cursor: pointer;
+                .active{
+                ::after{
+                    content: " \002D";
+                    }
                 }
-                p{
-                    font-family: 'Roboto', sans-serif;
-                    text-align: justify;
-                    font-size: 1.65rem;
-                    padding: .2rem;
-                    color: black;
+                ::before{
+                    content: "\002B";
+                    font-size: 2rem;
+                    position: absolute;
+                    right: 1rem;
+                    color: rebeccapurple;
+                    z-index: 0;
+                    display: flex;
                 }
             }
-            .cuadro1{
-                width: 400px;
-                height: 600px;
-                margin: 2rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding: .5rem;
-                background: rgb(228, 228, 228);
-                border-radius: 25px;
-                box-shadow: 12px 16px 35px rgba(0, 0, 0, 0.582);
-                h1{
-                    font-family: 'Oswald', sans-serif;
-                    color: rebeccapurple;
-                    background: none;
-                    margin-bottom: .3rem;
-                }
-                p{
+            .contenedor{
+                max-height: 0;
+                overflow: hidden;
+                background: rgba(219, 218, 218, 0.801);
+                transition: max-height 0.2s ease-out;
+                border-radius: 0 0 25px 25px;
+                .cuerpo{
+                    font-size: 2rem;
+                    padding: 2rem;
+                    border-top: 5px solid;
                     font-family: 'Roboto', sans-serif;
-                    text-align: justify;
-                    font-size: 1.65rem;
-                    padding: .2rem;
-                    color: black;
+                    border-image: linear-gradient(to right, transparent, rebeccapurple, transparent)1;;
                 }
             }
-        }
+            
+        } 
     }
 }
 
@@ -93,47 +96,38 @@
         background: white;
         .titulo2{
             h1{
-                background: none;
+                font-size: 2.5rem;
+                background:none;
                 color: rebeccapurple;
+                font-weight: bolder;
             }
             p{
+                padding: 1rem;
+                font-size: 2rem;
                 color: black;
             }
-            .arquetipos{
-
-                .cuadro{
-                    background: rgb(120, 59, 180);
-                    width: 100%;
-                    height: auto;
-                    padding: 0;
-                    margin: .7rem;
-                    margin-bottom: 1.2rem;
-                    h1{
-                        background: rebeccapurple;
-                        color: white;
-                        border-radius: 25px 25px 0 0;
-                    }
-                    p{
-                        margin: 1rem;
+        }
+        .acordeon{
+            width: 90%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .contenido{
+                .nombre{
+                    background: rebeccapurple;
+                    color: white;
+                    font-size: 2rem;
+                    font-weight: lighter;
+                }
+                .contenedor{
+                    .cuerpo{
+                        font-size: 1.5rem;
+                        padding: 1rem;
                     }
                 }
-                .cuadro1{
-                    background: rgb(143, 92, 194);
-                    width: 100%;
-                    height: auto;
-                    padding: 0;
-                    margin: .7rem;
-                    margin-bottom: 1.2rem;
-                    h1{
-                        background: rebeccapurple;
-                        color: white;
-                        border-radius: 25px 25px 0 0;
-                    }
-                    p{
-                        margin: 1rem;
-                    }
-                }
-            }
+                
+            } 
         }
     }
 }
@@ -142,41 +136,23 @@
     .cuantoSon{
         .titulo2{
             h1{
-                padding: .8rem;
                 font-size: 2rem;
-                margin-bottom: 0;
+                padding: 1rem;
+                margin-bottom: .5rem;
             }
             p{
-                font-size: 1.2rem;
-                width: 90%;
-                padding: .5rem;
-                font-weight: bold;
+                font-size: 1.5rem;
             }
-            .arquetipos{
-                .cuadro{
-                    
-                    h1{
-                        width: 100%;
-                        padding: .8rem;
-                        font-size: 2rem;
-                    }
-                    p{
-                        margin: 1.5rem;
+        }
+        .acordeon{
+            .contenido{
+                .contenedor{
+                    .cuerpo{
                         font-size: 1.2rem;
                     }
                 }
-                .cuadro1{
-                    h1{
-                        width: 100%;
-                        padding: .8rem;
-                        font-size: 2rem;
-                    }
-                    p{
-                        margin: 1.5rem;
-                        font-size: 1.2rem;
-                    }
-                }
-            }
+                
+            } 
         }
     }
 }

@@ -7,6 +7,7 @@
     align-items: center;
     flex-direction: row;
     margin-bottom: 2rem;
+    margin-top: 2.5rem;
     .img{
         width: 30%;
         margin-top: 5rem;
@@ -47,9 +48,7 @@
         align-items: center;
 
         .img{
-            margin-top: 1rem;
-            padding: 1rem;
-            margin-bottom: .5rem;
+        display: none;
         }
         .titulo{
             margin-top: 0;
@@ -78,10 +77,6 @@
         margin-bottom: 2rem;
         height: auto;
         align-items: center;
-        
-        .img{
-            padding: .5rem;
-        }
         .titulo{
             justify-content: flex-start;
             h1{

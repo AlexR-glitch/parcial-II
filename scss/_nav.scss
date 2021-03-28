@@ -1,6 +1,6 @@
 .escritorio{
     width: 100%;
-    height: 5rem;
+    height: 6rem;
     background: $menu;
     display: flex;
     justify-content: center;
@@ -9,6 +9,36 @@
     position: fixed;
     top: 0;
     z-index: 1;
+    .logo{
+        width: 30%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-8rem);
+        .img{
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            img{
+                transform: translateY(.3rem);
+                width: 95px;
+                height: 95px;
+            }
+        }
+    }
+    h1{
+        color: white;
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        font-weight: lighter;
+    }
     a{
         font-family: 'Oswald', sans-serif;
         font-size: 2rem;
@@ -35,7 +65,7 @@
 }
 
 .movil{
-    width: 80%;
+    width: 75%;
     max-width: 600px;
     height: 100vh;
     background: $menu;
@@ -48,6 +78,36 @@
     display: flex;
     z-index: 1000;
     transition: ease-in-out .25s;
+    .logo{
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateY(-4rem);
+        .img{
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            img{
+                transform: translateY(.7rem);
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+    h1{
+        color: white;
+        font-family: 'Oswald', sans-serif;
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        font-weight: lighter;
+    }
     a{
         font-size: 2.5rem;
         font-family: 'Oswald', sans-serif;
@@ -106,8 +166,46 @@
     }
     .movil{
         display: flex;
+        a{
+            transform: translateX(2rem);
+        }
     }
     .btnMenu{
         display: flex;
+        transform: translateX(2rem);
     }
 }
+
+@media screen and (max-width:500px){
+    .movil{
+        .logo{
+            width: 85%;
+            transform: translateY(-4rem);
+            justify-content: center;
+            align-items: center;
+            margin-left:1.5rem ;
+            .img{
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                img{
+                    transform: translateY(.4rem);
+                    width: 130px;
+                    height: 130px;
+                }
+            }
+        }
+        h1{
+            font-size: 1.5rem;
+            margin-left: 0rem;
+        }
+        a{
+            font-size: 2rem;
+            padding: 1rem;
+            }
+        }
+        .salir{
+            padding: 1rem;
+            font-size: 1.5rem;
+        }
+    }

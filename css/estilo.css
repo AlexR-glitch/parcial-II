@@ -1,6 +1,6 @@
 .escritorio {
   width: 100%;
-  height: 5rem;
+  height: 6rem;
   background: rgba(157, 11, 255, 0.774);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,6 +16,57 @@
   position: fixed;
   top: 0;
   z-index: 1;
+}
+
+.escritorio .logo {
+  width: 30%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateX(-8rem);
+          transform: translateX(-8rem);
+}
+
+.escritorio .logo .img {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.escritorio .logo .img img {
+  -webkit-transform: translateY(0.3rem);
+          transform: translateY(0.3rem);
+  width: 95px;
+  height: 95px;
+}
+
+.escritorio h1 {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  font-weight: lighter;
 }
 
 .escritorio a {
@@ -46,7 +97,7 @@
 }
 
 .movil {
-  width: 80%;
+  width: 75%;
   max-width: 600px;
   height: 100vh;
   background: rgba(157, 11, 255, 0.774);
@@ -67,6 +118,57 @@
   z-index: 1000;
   -webkit-transition: ease-in-out .25s;
   transition: ease-in-out .25s;
+}
+
+.movil .logo {
+  width: 95%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
+}
+
+.movil .logo .img {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.movil .logo .img img {
+  -webkit-transform: translateY(0.7rem);
+          transform: translateY(0.7rem);
+  width: 250px;
+  height: 250px;
+}
+
+.movil h1 {
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+  font-weight: lighter;
 }
 
 .movil a {
@@ -148,10 +250,54 @@
     display: -ms-flexbox;
     display: flex;
   }
+  .movil a {
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+  }
   .btnMenu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-transform: translateX(2rem);
+            transform: translateX(2rem);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .movil .logo {
+    width: 85%;
+    -webkit-transform: translateY(-4rem);
+            transform: translateY(-4rem);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 1.5rem;
+  }
+  .movil .logo .img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+  }
+  .movil .logo .img img {
+    -webkit-transform: translateY(0.4rem);
+            transform: translateY(0.4rem);
+    width: 130px;
+    height: 130px;
+  }
+  .movil h1 {
+    font-size: 1.5rem;
+    margin-left: 0rem;
+  }
+  .movil a {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .salir {
+    padding: 1rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -173,6 +319,7 @@
       -ms-flex-direction: row;
           flex-direction: row;
   margin-bottom: 2rem;
+  margin-top: 2.5rem;
 }
 
 .Ques .img {
@@ -237,9 +384,7 @@
             align-items: center;
   }
   .Ques .img {
-    margin-top: 1rem;
-    padding: 1rem;
-    margin-bottom: .5rem;
+    display: none;
   }
   .Ques .titulo {
     margin-top: 0;
@@ -275,9 +420,6 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .Ques .img {
-    padding: .5rem;
-  }
   .Ques .titulo {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
@@ -298,6 +440,16 @@
   width: 100%;
   height: auto;
   background: rgba(157, 11, 255, 0.774);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .cuantoSon .titulo2 {
@@ -316,6 +468,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 2rem;
 }
 
 .cuantoSon .titulo2 h1 {
@@ -326,6 +479,8 @@
   background: rebeccapurple;
   color: white;
   margin-bottom: 1rem;
+  padding: 1rem;
+  font-weight: lighter;
 }
 
 .cuantoSon .titulo2 p {
@@ -335,98 +490,84 @@
   color: white;
 }
 
-.cuantoSon .titulo2 .arquetipos {
+.cuantoSon .acordeon {
+  width: 90%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cuantoSon .acordeon .contenido {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.cuantoSon .acordeon .contenido .nombre {
+  position: relative;
   width: 100%;
+  background: white;
+  color: rebeccapurple;
+  font-family: 'Oswald', sans-serif;
+  font-size: 3rem;
+  padding: .5rem;
+  border-radius: 25px 25px 0 0;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+}
+
+.cuantoSon .acordeon .contenido .nombre .active ::after {
+  content: " \002D";
+}
+
+.cuantoSon .acordeon .contenido .nombre ::before {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  color: rebeccapurple;
+  z-index: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.cuantoSon .acordeon .contenido .contenedor {
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(219, 218, 218, 0.801);
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+  border-radius: 0 0 25px 25px;
+}
+
+.cuantoSon .acordeon .contenido .contenedor .cuerpo {
+  font-size: 2rem;
   padding: 2rem;
-}
-
-.cuantoSon .titulo2 .arquetipos .cuadro {
-  width: 400px;
-  height: 600px;
-  margin: .7rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: .5rem;
-  background: #fafafa;
-  border-radius: 25px;
-  -webkit-box-shadow: 12px 16px 35px rgba(0, 0, 0, 0.582);
-          box-shadow: 12px 16px 35px rgba(0, 0, 0, 0.582);
-}
-
-.cuantoSon .titulo2 .arquetipos .cuadro h1 {
-  font-family: 'Oswald', sans-serif;
-  color: rebeccapurple;
-  background: none;
-  margin-bottom: .3rem;
-}
-
-.cuantoSon .titulo2 .arquetipos .cuadro p {
+  border-top: 5px solid;
   font-family: 'Roboto', sans-serif;
-  text-align: justify;
-  font-size: 1.65rem;
-  padding: .2rem;
-  color: black;
-}
-
-.cuantoSon .titulo2 .arquetipos .cuadro1 {
-  width: 400px;
-  height: 600px;
-  margin: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: .5rem;
-  background: #e4e4e4;
-  border-radius: 25px;
-  -webkit-box-shadow: 12px 16px 35px rgba(0, 0, 0, 0.582);
-          box-shadow: 12px 16px 35px rgba(0, 0, 0, 0.582);
-}
-
-.cuantoSon .titulo2 .arquetipos .cuadro1 h1 {
-  font-family: 'Oswald', sans-serif;
-  color: rebeccapurple;
-  background: none;
-  margin-bottom: .3rem;
-}
-
-.cuantoSon .titulo2 .arquetipos .cuadro1 p {
-  font-family: 'Roboto', sans-serif;
-  text-align: justify;
-  font-size: 1.65rem;
-  padding: .2rem;
-  color: black;
+  -o-border-image: linear-gradient(to right, transparent, rebeccapurple, transparent) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(rebeccapurple), to(transparent)) 1;
+     border-image: linear-gradient(to right, transparent, rebeccapurple, transparent) 1;
 }
 
 @media screen and (max-width: 1024px) {
@@ -434,74 +575,52 @@
     background: white;
   }
   .cuantoSon .titulo2 h1 {
+    font-size: 2.5rem;
     background: none;
     color: rebeccapurple;
+    font-weight: bolder;
   }
   .cuantoSon .titulo2 p {
+    padding: 1rem;
+    font-size: 2rem;
     color: black;
   }
-  .cuantoSon .titulo2 .arquetipos .cuadro {
-    background: #783bb4;
-    width: 100%;
+  .cuantoSon .acordeon {
+    width: 90%;
     height: auto;
-    padding: 0;
-    margin: .7rem;
-    margin-bottom: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .cuantoSon .titulo2 .arquetipos .cuadro h1 {
+  .cuantoSon .acordeon .contenido .nombre {
     background: rebeccapurple;
     color: white;
-    border-radius: 25px 25px 0 0;
+    font-size: 2rem;
+    font-weight: lighter;
   }
-  .cuantoSon .titulo2 .arquetipos .cuadro p {
-    margin: 1rem;
-  }
-  .cuantoSon .titulo2 .arquetipos .cuadro1 {
-    background: #8f5cc2;
-    width: 100%;
-    height: auto;
-    padding: 0;
-    margin: .7rem;
-    margin-bottom: 1.2rem;
-  }
-  .cuantoSon .titulo2 .arquetipos .cuadro1 h1 {
-    background: rebeccapurple;
-    color: white;
-    border-radius: 25px 25px 0 0;
-  }
-  .cuantoSon .titulo2 .arquetipos .cuadro1 p {
-    margin: 1rem;
+  .cuantoSon .acordeon .contenido .contenedor .cuerpo {
+    font-size: 1.5rem;
+    padding: 1rem;
   }
 }
 
 @media screen and (max-width: 500px) {
   .cuantoSon .titulo2 h1 {
-    padding: .8rem;
     font-size: 2rem;
-    margin-bottom: 0;
+    padding: 1rem;
+    margin-bottom: .5rem;
   }
   .cuantoSon .titulo2 p {
-    font-size: 1.2rem;
-    width: 90%;
-    padding: .5rem;
-    font-weight: bold;
+    font-size: 1.5rem;
   }
-  .cuantoSon .titulo2 .arquetipos .cuadro h1 {
-    width: 100%;
-    padding: .8rem;
-    font-size: 2rem;
-  }
-  .cuantoSon .titulo2 .arquetipos .cuadro p {
-    margin: 1.5rem;
-    font-size: 1.2rem;
-  }
-  .cuantoSon .titulo2 .arquetipos .cuadro1 h1 {
-    width: 100%;
-    padding: .8rem;
-    font-size: 2rem;
-  }
-  .cuantoSon .titulo2 .arquetipos .cuadro1 p {
-    margin: 1.5rem;
+  .cuantoSon .acordeon .contenido .contenedor .cuerpo {
     font-size: 1.2rem;
   }
 }
@@ -675,10 +794,13 @@
   .galeriaEjemplos .lightbox .image img {
     max-height: 600px;
     max-width: 600px;
+    color: white;
   }
   .galeriaEjemplos .lightbox .image span {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
+    width: 80%;
+    text-align: center;
   }
   .galeriaEjemplos .galeria h1 {
     color: white;
